@@ -1,9 +1,9 @@
 ---
-title: «Код»
+title: «Главная страница»
 date: 2025-09-28T08:47:11+03:00
 draft: false
 ---
 
-# Hello, World!
+# Портфолио Павленко Павла
 
-loflkdjgnkjfdsgkfsd,mng ljbsdfngalsaf. fgk;jnfdjk gang 
+Студент РГПУ им. Герцена 
