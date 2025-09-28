@@ -1,0 +1,36 @@
+{{/* layouts/partials/init.html */}}
+{{ $site := .Site }}
+
+<!-- Init partial for theme DoIt -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Title -->
+  <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ $site.Title }}</title>
+
+  <!-- Meta description -->
+  {{ with .Params.description }}
+  <meta name="description" content="{{ . }}">
+  {{ else if $site.Params.description }}
+  <meta name="description" content="{{ $site.Params.description }}">
+  {{ end }}
+
+  <!-- Favicon -->
+  {{ with $site.Params.favicon }}
+  <link rel="icon" href="{{ . | relURL }}">
+  {{ end }}
+
+  <!-- Stylesheets (пример, может быть у темы своя схема) -->
+  {{ range $site.Params.custom_css }}
+  <link rel="stylesheet" href="{{ . | relURL }}">
+  {{ end }}
+
+  <!-- Scripts, шрифты и т.д. -->
+  {{ with $site.Params.custom_js }}
+  {{ range . }}
+  <script src="{{ . | relURL }}" defer></script>
+  {{ end }}
+  {{ end }}
+</head>
+
